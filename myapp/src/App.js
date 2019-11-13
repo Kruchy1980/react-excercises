@@ -41,8 +41,8 @@ return (
     <p>Twój wiek: {props.age}</p>
   </div>
 )
-// 
-// }
+
+}
 
 //  We can add some code above the render to include the two components in one to make the code shorter  by adding the variable with cumulated code
 
@@ -60,6 +60,6 @@ const App = () => (
 // Now by getting the other element of our HTML we can set the second name by using similar parameters to our second render function
 // ReactDOM.render(<Person name='Heniu' age='25' />, document.querySelector('#p2'))
 // Now we can tqke from dom the onlu one div which we created
-ReactDOM.render(App, document.querySelector('#app'));
+ReactDOM.render(<App />, document.querySelector('#root'));
 
 export default App
