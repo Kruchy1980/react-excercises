@@ -50,7 +50,7 @@ const App = () => (
   <div>
     <div>
       <Person name='Jurek' age='30' />
-      <Person name='Heniu' age='25' />
+      "<Person name='Heniu' age='25' />"
     </div>
   </div>
 );
