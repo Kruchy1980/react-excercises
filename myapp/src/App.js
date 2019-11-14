@@ -50,8 +50,6 @@ const App = () => (
   <div>
     <div>
       <Person name='Jurek' age='30' />
-    </div>
-    <div>
       <Person name='Heniu' age='25' />
     </div>
   </div>
