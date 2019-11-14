@@ -25,7 +25,7 @@ const app = (
     <Person name='Jurek' age='30' />
     <Person name='Heniu' age='25' />
   </div>
-)
+);
 
 // We had also implemented rect dom the library responsible for actions with DOM in HTML.
 // Now we can render a function = implement function to particular element in HTML by render below by implementing it to specified element chosen by querySelector
@@ -34,4 +34,6 @@ const app = (
 // Now by getting the other element of our HTML we can set the second name by using similar parameters to our second render function
 // ReactDOM.render(<Person name='Heniu' age='25' />, document.querySelector('#p2'))
 // Now we can tqke from dom the onlu one div which we created
-ReactDOM.render(app, document.querySelector('#app'));
+ReactDOM.render{
+      return (app, document.querySelector('#app'));
+}
