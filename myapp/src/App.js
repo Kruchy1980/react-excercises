@@ -48,8 +48,12 @@ return (
 
 const App = () => (
   <div>
-    <Person name='Jurek' age='30' />
-    <Person name='Heniu' age='25' />
+    <div>
+      <Person name='Jurek' age='30' />
+    </div>
+    <div>
+      <Person name='Heniu' age='25' />
+    </div>
   </div>
 );
 
