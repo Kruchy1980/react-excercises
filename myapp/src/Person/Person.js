@@ -16,7 +16,18 @@ import React from 'react';
 // Creating of dynamic content
 const person = () => {
 	//Component function has to return some JSX eg. - for eg we want to randomize age in every injected component in App.js if we want to injest dynamic part of code we have to make it in the curly brackets.
-	return <p>I'am a Person and I am {Math.floor(Math.random() * 30)} years old</p>;
+	//We can than add the HTML tags which are a JSX tag at present and without the styles we can modify content beside we have to inject them in other curlu braces as we can see the rest o cod can generted by itself
+	return (
+		<p>
+			I'am a Person and I am{' '}
+			{
+				<strong>
+					<u>{Math.floor(Math.random() * 30)}</u>
+				</strong>
+			}{' '}
+			years old
+		</p>
+	);
 };
 
 // We need to export the component as well so we could use the component  we crated
