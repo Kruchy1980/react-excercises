@@ -2,7 +2,7 @@
 import React from 'react';
 
 
-
+// We need to connect our component with App by importing
 
 
 // Now when we created the new folder in source folder we can create next view in our project - Basics:
@@ -11,14 +11,14 @@ import React from 'react';
 // Because of ES6 when we have new opportunities we can use const for non changing module wchich is mostly used and we can use the lower letters as the name as well as large. Theoretically lower letters are mostly used in names.
 // () in function is called arguments list and is used instead of sual function name as the arrow function.
 // this is component
-const Person = () => {
+const person = () => {
     //Component function has to return some JSX eg.
-    return <p>I'am a Person</p>
+    return <p>I'am a Person</p>;
 };
 
 
 
 
 // We need to export the component as well so we could use the component  we crated
-export default Person;
+export default person;
 
