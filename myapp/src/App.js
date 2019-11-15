@@ -2,6 +2,10 @@
 import React, { Component } from 'react';
 
 import './App.css';
+// It is how  we can add the separate components to the app app.js until we do not create th Root.js file and won't add there paths to another files with components.
+import Person from './Person/Person'; // We can use capital letter of our component and rlative path to our newly created file Person.js The name of import has to be named by capital leter
+
+
 
 // This is an element extending Components and is injected into App.js file in src folder.  - we can display it by running npm start in terminal in our app directly
 class App extends Component { 
@@ -9,9 +13,11 @@ class App extends Component {
   render() {
     return (
       // (That is first element of our webApp)
+      // Now we can use the component we nhave create in App.js file using JSX tags which are look similar to HTML tags
       <div className='App'>
         <h1>Hello All I am React Application</h1>
         <p>That is really working :)</p>
+        <Person />
       </div>
     );
     // We can use createElement methode but it is not used to often, because the code is longer and means the same what aboved code
