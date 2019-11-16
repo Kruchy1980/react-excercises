@@ -72,10 +72,23 @@ class App extends Component {
 
 	// To add logic to button we have to create a methode separately and than se can add it by simply JSX methode onClick.
 	// Create a methode name whatever can be but is good to name it tobe clearly understandable. Than we can add it to our onclick in specified element but without calling methode so without - ().
-
+	
+	// Manipulating with states
 	switchNameButton = () => {
-		console.log('Zostało kliknięte');
-		
+		// console.log('Zostało kliknięte'); // comment for now
+		// we need to remember that the state can not be mutated like that
+		//this.state.persons[0].name = 'Clementine'; // Wrong command = won't work
+		// We should use seet state methot for this which will chqange the state not mutate the state.
+		//setState takes an object as an argument and will concates/merges it with already existed state.
+		// We need to copy the state and change the keys and/or values manually to change it on a display.
+		this.setState({
+			persons: [
+			{name: 'Max-Pain', age: 28},
+			{name: 'Alex', age: 30},
+			{name: 'Ulryk', age: 22},
+			{name: 'Howard', age: 40}
+		]})
+
 	}
 
 
