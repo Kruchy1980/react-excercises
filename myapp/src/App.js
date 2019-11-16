@@ -22,7 +22,7 @@ class App extends Component {
 		this.setState({
 			persons: [
 				{ name: 'Max-Pain', age: 28 },
-				{ name: 'Alex', age: 30 },
+				{ name: 'Alexander', age: 30 },
 				{ name: 'Ulryk', age: 22 },
 				{ name: 'Howard', age: 40 }
 			]
