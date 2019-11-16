@@ -31,7 +31,7 @@ class App extends Component {
 
 	// Render is a methode which refreshes the data in module/component
 	render() {
-		// If we want to assigned changing of state to another elements eg person2 when clicking it is necessary to add a another argment to this element and name it whatever we want.
+		// If we want to assigned changing of state to another elements eg person2 when clicking it is necessary to add a another argment to this element and name it whatever we want than switch to Persons.js.
 		return (
 			<div className="App">
 				<h1>Hello All I am React Application</h1>
