@@ -62,14 +62,26 @@ class App extends Component {
 			{name: 'Howard', age: 45}
 		]
 	}
+
+	// To add logic to button we have to create a methode separately and than se can add it by simply JSX methode onClick.
+	// Create a methode name whatever can be but is good to name it tobe clearly understandable. Than we can add it to our onclick in specified element but without calling methode so without - ().
+
+	switchNameButton = () => {
+		console.log('Zostało kliknięte');
+		
+	}
+
+
+
 	// Render is a methode which refreshes the data in module/component
 	render() {
 		return (
+
 			//As we can see we are injecting the parameters from state which can be created inside stan of component by word this so it means that it concerns the present state/present in this component extension.
 			<div className="App">
 				<h1>Hello All I am React Application</h1>
 				<p>That is really working :)</p>
-				<button>Switch Name</button>
+				<button onClick={this.switchNameButton}>Switch Name</button>
 				<Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
 				<Person name={this.state.persons[1].name} age={this.state.persons[1].age}>
 					My Hobbies: Climbing
