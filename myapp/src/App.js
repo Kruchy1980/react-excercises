@@ -5,6 +5,8 @@ import './App.css';
 // It is how  we can add the separate components to the app app.js until we do not create th Root.js file and won't add there paths to another files with components.
 import Person from './Person/Person'; // We can use capital letter of our component and rlative path to our newly created file Person.js The name of import has to be named by capital leter
 
+//--------------------------------------------------------------
+
 // This is an element extending Components and is injected into App.js file in src folder.  - we can display it by running npm start in terminal in our app directly
 // class App extends Component {
 // 		// Render is a methode which refreshes the data in module/component
@@ -29,6 +31,9 @@ import Person from './Person/Person'; // We can use capital letter of our compon
 // return React.createElement('div', {className: 'App'}, React.createElement('h1'), null, 'Hi I\'m a React Application!!!');
 // 	}
 // }
+
+
+// -------------------------------------------------------------
 // class App extends Component {
 // 		// Render is a methode which refreshes the data in module/component
 // 	render() {
@@ -47,6 +52,8 @@ import Person from './Person/Person'; // We can use capital letter of our compon
 // 		);
 // 	}
 // }
+
+//--------------------------------------------------------------
 
 // Sometimes in application we want to have possibility to change  the parameter of component on click as well so let's create button inside our app and that we will inject logic of the button to be workable as we want let's make it to change the name of element for instnce.
 // To make the parameters of component changable we have to have them not hashed as it is i this exmaple so if we want to change them we have to unhashed them from the elements/components we injected to that file. To do this we have to put our parameters as name or age i separate variable and we can do it only in components which extends the components as here
