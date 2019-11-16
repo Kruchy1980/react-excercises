@@ -33,16 +33,22 @@ import React from 'react';
 // After we used an arguments in App.js we have to inject them here by parameter props in function. We can notify that if there is only one parameter in function the brackets do not have to be used, that is why the props are not in a brackets
 const person = (props) => {
 	return (
-		// Now when we declared the additional information to the App.js file in particular elements we can than add such a modification
-		<p>
-			I'm a {props.name} and I am{' '}
-			{
-				<strong>
-					<u>{props.age}</u>
-				</strong>
-			}{' '}
-			years old !
-		</p>
+		// Now when we declared the additional information to the App.js file in particular elements we can than add such a modification if we want to add another element for exmple from tags injected in main App.js we can inject it by closing in one larger box eg.
+		//	*** first paragraph - props - injecting inline elements inside the other elements ***
+		<div>
+			<p>
+				I'm a {props.name} and I am{' '}
+				{
+					<strong>
+						<u>{props.age}</u>
+					</strong>
+				}{' '}
+				years old !
+			</p>
+
+			<p>{props.children}</p>
+		</div>
+		//	*** second paragraph is treaten as a children so it will display everything beetween tags - see the App.js files ***
 	);
 };
 // We need to export the component as well so we could use the component  we crated

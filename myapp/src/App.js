@@ -33,7 +33,7 @@ class App extends Component {
 	// Render is a methode of react as well
 	render() {
 		return (
-			//As same we can add props which are like atributes separately declared and can be used for separate element to modify it we have added the attributes separately to components
+			// We can also inject the elements between tags but a little bit different -  go to Person.js
 			<div className="App">
 				<h1>Hello All I am React Application</h1>
 				<p>That is really working :)</p>
