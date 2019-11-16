@@ -7,7 +7,7 @@ import Person from './Person/Person'; // We can use capital letter of our compon
 
 // This is an element extending Components and is injected into App.js file in src folder.  - we can display it by running npm start in terminal in our app directly
 // class App extends Component {
-// 	// Render is a methode of react as well
+// 		// Render is a methode which refreshes the data in module/component
 // 	render() {
 // 		return (
 // 			// (That is first element of our webApp)
@@ -29,24 +29,59 @@ import Person from './Person/Person'; // We can use capital letter of our compon
 // return React.createElement('div', {className: 'App'}, React.createElement('h1'), null, 'Hi I\'m a React Application!!!');
 // 	}
 // }
+// class App extends Component {
+// 		// Render is a methode which refreshes the data in module/component
+// 	render() {
+// 		return (
+// 			// We can also inject the elements between tags but a little bit different -  go to Person.js
+// 			<div className="App">
+// 				<h1>Hello All I am React Application</h1>
+// 				<p>That is really working :)</p>
+// 				<Person name="Max" age="28" />
+// 				<Person name="Alex" age="30">
+// 					My Hobbies: Climbing
+// 				</Person>
+// 				<Person name="Ulryk" age="22" />
+// 				<Person name="Howard" age="45" />
+// 			</div>
+// 		);
+// 	}
+// }
+
+// Sometimes in application we want to have possibility to change  the parameter of component on click as well so let's create button inside our app and that we will inject logic of the button to be workable as we want let's make it to change the name of element for instnce.
+// To make the parameters of component changable we have to have them not hashed as it is i this exmaple so if we want to change them we have to unhashed them from the elements/components we injected to that file. To do this we have to put our parameters as name or age i separate variable and we can do it only in components which extends the components as here
+
 class App extends Component {
-	// Render is a methode of react as well
+	// here we can use the state methode where we can create the particular parameters to be changed laterv"state" is ised for doing it. Using state in every created component makes the application harder to be interpreted specially when it grows so it is good idea to not to use it in every component we create and is not created as one which extends component.
+	state = {
+		// Now we are creating whatever named object which values will be object as well
+		persons: [
+			{name: 'Max', age: 28},
+			{name: 'Alex', age: 30},
+			{name: 'Ulryk', age: 22},
+			{name: 'Howard', age: 45}
+		]
+	}
+	// Render is a methode which refreshes the data in module/component
 	render() {
 		return (
-			// We can also inject the elements between tags but a little bit different -  go to Person.js
+			//As we can see we are injecting the parameters from state which can be created inside stan of component by word this so it means that it concerns the present state/present in this component extension.
 			<div className="App">
 				<h1>Hello All I am React Application</h1>
 				<p>That is really working :)</p>
-				<Person name="Max" age="28" />
-				<Person name="Alex" age="30">
+				<button>Switch Name</button>
+				<Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
+				<Person name={this.state.persons[1].name} age={this.state.persons[1].age}>
 					My Hobbies: Climbing
 				</Person>
-				<Person name="Ulryk" age="22" />
-				<Person name="Howard" age="45" />
+				<Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
+				<Person name={this.state.persons[3].name} age={this.state.persons[3].age} />
 			</div>
 		);
 	}
 }
+
+
 
 // After declare such a informtion we have to implement them into our code of Person Component so we have to go back to Person.js and...
 
