@@ -18,10 +18,11 @@ class App extends Component {
 	};
 
 	// Manipulating with states
-	switchNameButton = () => {
+	// If we add parmeter to switchNameButton than we can have dynamically changing name  like the example below
+	switchNameButton = (newName) => {
 		this.setState({
 			persons: [
-				{ name: 'Max-Pain', age: 28 },
+				{ name: newName, age: 28 },
 				{ name: 'Alexander', age: 30 },
 				{ name: 'Ulryk', age: 22 },
 				{ name: 'Howard', age: 40 }
@@ -32,13 +33,20 @@ class App extends Component {
 	// Render is a methode which refreshes the data in module/component
 	render() {
 		// If we want to assigned changing of state to another elements eg person2 when clicking it is necessary to add a another argment to this element and name it whatever we want than switch to Persons.js.
+		// Now when we set the dynamically changing name we can call it in two ways:
+		//first is to bind the neme as in the button onclick attribute by binding it. bind has at least two attributes this which is controllinf this.setState, and the second argument is to set the value of state eg Henryk
+		// Second methode is to execute arrow function onclick like we will see in the first example as we czn see we do not need to use bind. Bind is better to use if we only can do it because the second solution with function is less effective than bind.
 		return (
 			<div className="App">
 				<h1>Hello All I am React Application</h1>
 				<p>That is really working :)</p>
-				<button onClick={this.switchNameButton}>Switch Name</button>
+				<button onClick={() => this.switchNameButton('Henryk')}>Switch Name</button>
 				<Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
-				<Person name={this.state.persons[1].name} age={this.state.persons[1].age} doIt={this.switchNameButton}>
+				<Person
+					name={this.state.persons[1].name}
+					age={this.state.persons[1].age}
+					doIt={this.switchNameButton.bind(this, 'Henrietta :)')}
+				>
 					My Hobbies: Climbing
 				</Person>
 				<Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
