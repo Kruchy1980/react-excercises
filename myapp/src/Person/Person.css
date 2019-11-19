@@ -1,7 +1,13 @@
 /* Adding styles to Person.js */
 
 /*  That named file concerns whole application styles, but we will use the classes which are in Persons.js */
+/* Just because we have added styles to our general styles we have to import them in our app.js file - go to App.js file to add the styles */
 
 .Person {
-    border: 1px solid black;
+	width: 60%;
+	margin: 16px auto;
+	border: 1px solid #eee;
+	box-shadow: 0 2px 3px #ccc;
+	padding: 16px;
+	text-align: center;
 }

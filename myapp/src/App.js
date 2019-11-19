@@ -1,8 +1,10 @@
 // Here we do have imports of necessary packages to our application.
 import React, { Component } from 'react';
-
+// Main styles of application  here are added styles for Application from every files not asigned by modules
 import './App.css';
+
 // It is how  we can add the separate components to the app app.js until we do not create th Root.js file and won't add there paths to another files with components.
+// Add Person general styles import
 import Person from './Person/Person'; // We can use capital letter of our component and rlative path to our newly created file Person.js The name of import has to be named by capital leter
 
 //--------------------------------------------------------------

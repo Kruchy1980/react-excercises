@@ -1,5 +1,7 @@
 // B4 we can start to use components we have to import the React from ract to interprete the part of code.
 import React from 'react';
+// We need to add styles in here with import
+import './Person.css';
 
 // That is an exmple of dumb component - offstate component wchich we schould havw more than casual stqtecomponenet as is in App.js file. Now we can add the calling from App which we declared inside the element and named doIt, so we know that it should be inserted inside main pargraph which should execute the function assigned to button.
 
