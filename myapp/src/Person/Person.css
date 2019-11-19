@@ -1,0 +1,7 @@
+/* Adding styles to Person.js */
+
+/*  That named file concerns whole application styles, but we will use the classes which are in Persons.js */
+
+.Person {
+    border: 1px solid black;
+}

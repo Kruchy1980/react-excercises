@@ -6,7 +6,11 @@ import './App.css';
 import Person from './Person/Person'; // We can use capital letter of our component and rlative path to our newly created file Person.js The name of import has to be named by capital leter
 
 //--------------------------------------------------------------
-
+//-------------------------------------------------------------
+// Adding styles To person view 2 ways of doing that ------------
+// --------------------------------------------------------------
+// First way is to add to the folder Person a file Person.css - We need to remember that named file is a global css file so does not concern the only Person .js file but all files in appliation
+// ---------------------------------------------------------------
 class App extends Component {
 	state = {
 		persons: [
@@ -17,8 +21,6 @@ class App extends Component {
 		]
 	};
 
-	// Manipulating with states
-	// If we add parmeter to switchNameButton than we can have dynamically changing name  like the example below
 	switchNameButton = (newName) => {
 		this.setState({
 			persons: [
@@ -29,10 +31,8 @@ class App extends Component {
 			]
 		});
 	};
-	//Here below we can use a new name change handler/button nqme does not matter and we need to set event as a parqameter in here
+
 	nameChangedHandler = (event) => {
-		// We want to change state as well so need to set the new state in here
-		// Than wherever we would like to change the name  we need toset an event target as below with parameter .value because we will get the name from input so we need use the inputs value
 		this.setState({
 			persons: [
 				{ name: 'Irek', age: 28 },
@@ -43,8 +43,6 @@ class App extends Component {
 		});
 	};
 
-	// Render is a methode which refreshes the data in module/component
-	// In this cawse we want to change the name using change name handler and we want to change the second name so need tu set ther the changed parmeter whicg wil be taken from Persons.js file which is a dummy component extension:)
 	render() {
 		return (
 			<div className="App">
