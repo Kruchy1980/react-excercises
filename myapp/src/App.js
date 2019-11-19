@@ -44,13 +44,24 @@ class App extends Component {
 			]
 		});
 	};
-
+// We can add styles inline as well in the render function  of our component name of constant does not have to be named style but for better recognizing we can name it like that/asan object.css When we declare it we can add the style inside our element- button this time.
 	render() {
+
+		const style = {
+			backgroundColor: 'yellow',
+			font: 'inherit',
+			border: '1px solid blue',
+			padding: '8px',
+			cursor: 'pointer'
+		};
+
 		return (
 			<div className="App">
 				<h1>Hello All I am React Application</h1>
 				<p>That is really working :)</p>
-				<button onClick={() => this.switchNameButton('Henryk')}>Switch Name</button>
+				<button
+				style={style}
+				onClick={() => this.switchNameButton('Henryk')}>Switch Name</button>
 				<Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
 				<Person
 					name={this.state.persons[1].name}
