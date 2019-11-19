@@ -7,6 +7,7 @@ import './App.css';
 // Add Person general styles import
 import Person from './Person/Person'; // We can use capital letter of our component and rlative path to our newly created file Person.js The name of import has to be named by capital leter
 
+
 //--------------------------------------------------------------
 //-------------------------------------------------------------
 // Adding styles To person view 2 ways of doing that ------------
@@ -19,7 +20,8 @@ class App extends Component {
 			{ name: 'Max', age: 28 },
 			{ name: 'Alex', age: 30 },
 			{ name: 'Ulryk', age: 22 },
-			{ name: 'Howard', age: 45 }
+			{ name: 'Howard', age: 45 },
+			{ username: 'Jakub\'s', age: 40 }
 		]
 	};
 
@@ -44,6 +46,12 @@ class App extends Component {
 			]
 		});
 	};
+	usernameHandlerMethod = (event) => {
+		this.setState({
+			persons:
+				{username: event.target.value, age: 25 }
+		})
+	}
 // We can add styles inline as well in the render function  of our component name of constant does not have to be named style but for better recognizing we can name it like that/asan object.css When we declare it we can add the style inside our element- button this time.
 	render() {
 
