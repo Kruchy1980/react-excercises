@@ -18,27 +18,46 @@ class App extends Component {
 	};
 
 	// Manipulating with states
-	switchNameButton = () => {
+	// If we add parmeter to switchNameButton than we can have dynamically changing name  like the example below
+	switchNameButton = (newName) => {
 		this.setState({
 			persons: [
-				{ name: 'Max-Pain', age: 28 },
+				{ name: newName, age: 28 },
 				{ name: 'Alexander', age: 30 },
 				{ name: 'Ulryk', age: 22 },
 				{ name: 'Howard', age: 40 }
 			]
 		});
 	};
+	//Here below we can use a new name change handler/button nqme does not matter and we need to set event as a parqameter in here
+	nameChangedHandler = (event) => {
+		// We want to change state as well so need to set the new state in here
+		// Than wherever we would like to change the name  we need toset an event target as below with parameter .value because we will get the name from input so we need use the inputs value
+		this.setState({
+			persons: [
+				{ name: 'Irek', age: 28 },
+				{ name: event.target.value, age: 30 },
+				{ name: 'Ulryk', age: 25 },
+				{ name: 'Howard', age: 40 }
+			]
+		});
+	};
 
 	// Render is a methode which refreshes the data in module/component
+	// In this cawse we want to change the name using change name handler and we want to change the second name so need tu set ther the changed parmeter whicg wil be taken from Persons.js file which is a dummy component extension:)
 	render() {
-		// If we want to assigned changing of state to another elements eg person2 when clicking it is necessary to add a another argment to this element and name it whatever we want than switch to Persons.js.
 		return (
 			<div className="App">
 				<h1>Hello All I am React Application</h1>
 				<p>That is really working :)</p>
-				<button onClick={this.switchNameButton}>Switch Name</button>
+				<button onClick={() => this.switchNameButton('Henryk')}>Switch Name</button>
 				<Person name={this.state.persons[0].name} age={this.state.persons[0].age} />
-				<Person name={this.state.persons[1].name} age={this.state.persons[1].age} doIt={this.switchNameButton}>
+				<Person
+					name={this.state.persons[1].name}
+					age={this.state.persons[1].age}
+					doIt={this.switchNameButton.bind(this, 'Henrietta :)')}
+					changed={this.nameChangedHandler}
+				>
 					My Hobbies: Climbing
 				</Person>
 				<Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
