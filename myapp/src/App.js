@@ -29,13 +29,23 @@ class App extends Component {
 			]
 		});
 	};
+	//Here below we can use a new name change handler/button nqme does not matter and we need to set event as a parqameter in here
+	nameChangedHandler = (event) => {
+		// We want to change state as well so need to set the new state in here
+		// Than wherever we would like to change the name  we need toset an event target as below with parameter .value because we will get the name from input so we need use the inputs value
+		this.setState({
+			persons: [
+				{ name: 'Irek', age: 28 },
+				{ name: event.target.value, age: 30 },
+				{ name: 'Ulryk', age: 25 },
+				{ name: 'Howard', age: 40 }
+			]
+		});
+	};
 
 	// Render is a methode which refreshes the data in module/component
+	// In this cawse we want to change the name using change name handler and we want to change the second name so need tu set ther the changed parmeter whicg wil be taken from Persons.js file which is a dummy component extension:)
 	render() {
-		// If we want to assigned changing of state to another elements eg person2 when clicking it is necessary to add a another argment to this element and name it whatever we want than switch to Persons.js.
-		// Now when we set the dynamically changing name we can call it in two ways:
-		//first is to bind the neme as in the button onclick attribute by binding it. bind has at least two attributes this which is controllinf this.setState, and the second argument is to set the value of state eg Henryk
-		// Second methode is to execute arrow function onclick like we will see in the first example as we czn see we do not need to use bind. Bind is better to use if we only can do it because the second solution with function is less effective than bind.
 		return (
 			<div className="App">
 				<h1>Hello All I am React Application</h1>
@@ -46,6 +56,7 @@ class App extends Component {
 					name={this.state.persons[1].name}
 					age={this.state.persons[1].age}
 					doIt={this.switchNameButton.bind(this, 'Henrietta :)')}
+					changed={this.nameChangedHandler}
 				>
 					My Hobbies: Climbing
 				</Person>
