@@ -1,6 +1,35 @@
-.Paragraph {
+/* .Paragraph {
 	background-color: #999;
 	color: #fff;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	text-align: center;
+} */
+
+.UserOutput {
+	width: 60%;
+	padding: 16px;
+	margin: 16px;
+	border: 2px solid rgb(25, 83, 28);
+	background-color: #ccc;
+	text-align: center;
+	color: rgb(100, 34, 34);
+}
+
+.UserOutput p:first-child {
+	font-weight: bold;
+	font-family: serif;
+	font-size: 2em;
+}
+
+.UserOutput p:first-child::first-letter {
+	font-size: 2.5em;
+	color: rgb(121, 121, 71);
+	font-style: italic;
+	text-shadow: 7px 7px 4px rgb(151, 209, 36);
+}
+
+.UserOutput p:nth-child(2) {
+	color: #8f2929;
+	letter-spacing: 2px;
+	text-decoration: underline;
 }
