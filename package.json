@@ -1,0 +1,29 @@
+{
+  "name": "react-full",
+  "version": "1.0.0",
+  "description": "mycomponents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kruchy1980/react-excercises.git"
+  },
+  "keywords": [
+    "build",
+    "of",
+    "first",
+    "component",
+    "in",
+    "react",
+    "-",
+    "basics"
+  ],
+  "author": "jakub kruszynski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kruchy1980/react-excercises/issues"
+  },
+  "homepage": "https://github.com/Kruchy1980/react-excercises#readme"
+}
